@@ -55,6 +55,7 @@
     <Compile Include="SerializationTests\DeepCopyTests.cs" />
     <Compile Include="SerializationTests\ConsiderForCodeGenerationAttributeTests.cs" />
     <Compile Include="SiloInitializationTests.cs" />
+    <Compile Include="StreamingTests\ESClientStreamTests.cs" />
     <Compile Include="StreamingTests\SQSClientStreamTests.cs" />
     <Compile Include="StreamingTests\SQSSubscriptionMultiplicityTests.cs" />
     <Compile Include="StreamingTests\AQClientStreamTests.cs" />
@@ -74,7 +75,6 @@
     <Compile Include="DuplicateActivationsTests.cs" />
     <Compile Include="ExceptionPropagationTests.cs" />
     <Compile Include="ExternalTypesTests.cs" />
-    <Compile Include="FSharpGrainTests.cs" />
     <Compile Include="GenericGrainsInAzureStorageTests.cs" />
     <Compile Include="GenericGrainTests.cs" />
     <Compile Include="GrainActivateDeactivateTests.cs" />
@@ -100,7 +100,6 @@
     <Compile Include="SerializationTests\ProtobufSerializationTests\Addressbook.cs" />
     <Compile Include="SerializationTests\ProtobufSerializationTests\Counter.cs" />
     <Compile Include="SerializationTests\ProtobufSerializationTests\ProtobufSerializationTests.cs" />
-    <Compile Include="SerializationTests\SerializationTests.FSharpTypes.cs" />
     <Compile Include="SerializationTests\SerializationTests.JsonTypes.cs" />
     <Compile Include="SimpleGrainTests.cs" />
     <Compile Include="StatelessWorkerTests.cs" />
@@ -185,6 +184,10 @@
       <Project>{8d937706-f6da-4d33-b0a9-24a260bd3080}</Project>
       <Name>OrleansCodeGenerator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\OrleansEventStore\OrleansEventStore.csproj">
+      <Project>{58BF2B84-CE20-426E-9BC8-D2EB3B943D62}</Project>
+      <Name>OrleansEventStore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\OrleansGoogleUtils\OrleansGoogleUtils.csproj">
       <Project>{b9196cb5-d356-4228-b73f-143f2eb80c64}</Project>
       <Name>OrleansGoogleUtils</Name>
@@ -224,10 +227,6 @@
     <ProjectReference Include="..\TestFSharpInterfaces\TestFSharpInterfaces.fsproj">
       <Project>{2375d7d5-9b30-493f-9c2e-a6b2811a3c5a}</Project>
       <Name>TestFSharpInterfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TestFSharp\TestFSharp.fsproj">
-      <Project>{ca8dab68-17e9-48bf-afa3-9ccfd4b0a3cd}</Project>
-      <Name>TestFSharp</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestGrainInterfaces\TestGrainInterfaces.csproj">
       <Project>{3972213f-189b-41d4-90fe-38d513c1106d}</Project>
